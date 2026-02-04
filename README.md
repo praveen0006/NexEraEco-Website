@@ -1,117 +1,16 @@
-# NexEraEco Website
+# React + Vite
 
-<div align="center">
-  <img src="react-app/public/assets/logo.png" alt="NexEraEco Logo" width="120" />
-  <h3>Healing Nature Through IoT</h3>
-  <p>Building the next generation of clean energy and agricultural technology.</p>
-  
-  [![Website](https://img.shields.io/badge/Website-Live-10b981?style=for-the-badge)](https://nexeraeco.com)
-  [![License](https://img.shields.io/badge/License-Proprietary-blue?style=for-the-badge)](#)
-</div>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🌱 About NexEraEco
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-NexEraEco is a hardware-focused startup building innovative solutions for clean energy and sustainable agriculture. Our flagship product, **SolarXite**, is a dual-axis solar tracking system designed specifically for rooftop installations.
+## React Compiler
 
-## 🚀 Products
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### SolarXite
-- **Status**: TRL-4 Prototype (Lab Validated)
-- **Description**: Compact dual-axis solar tracking hardware for rooftops, maximizing energy capture by 25-40%.
-- **IP**: Design Patent Registered (India, Patent No: 428970-001)
+## Expanding the ESLint configuration
 
-### Smart Crop Guard
-- **Status**: Research Validated
-- **Description**: IoT-based animal intrusion detection and precision irrigation system.
-- **Publication**: [IEEE Xplore](https://ieeexplore.ieee.org/document/11324174)
-
----
-
-## 💻 Tech Stack
-
-| Frontend | Styling | Build Tool |
-|----------|---------|------------|
-| React 18 | Tailwind CSS 4 | Vite |
-| React Router | CSS Variables | ESLint |
-| Framer Motion | Plus Jakarta Sans | |
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/praveen0006/NexEraEco-Website.git
-cd NexEraEco-Website/react-app
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-The app will be available at `http://localhost:5173`.
-
-### Production Build
-
-```bash
-npm run build
-npm run preview
-```
-
----
-
-## 🎨 Features
-
-- **Dual Theme System**: Seamless Light/Dark mode with smooth transitions
-- **Modern Typography**: Plus Jakarta Sans font family
-- **Responsive Design**: Mobile-first, works on all devices
-- **Interactive Prototype Gallery**: Detailed hardware showcase
-- **Investor Portal**: Dedicated section with funding requirements
-- **EPC Partner Portal**: Pilot request forms for solar installers
-
----
-
-## 📁 Project Structure
-
-```
-NexEraEco-Website/
-├── react-app/              # Main React application
-│   ├── public/assets/      # Images, PDFs, and static files
-│   ├── src/
-│   │   ├── components/     # Header, Footer, UI components
-│   │   ├── pages/          # Route pages (Home, Products, etc.)
-│   │   ├── index.css       # Global styles and theme variables
-│   │   └── App.jsx         # Main app with routing
-│   └── package.json
-└── README.md
-```
-
----
-
-## 📧 Contact
-
-- **Email**: praveen19121@gmail.com
-- **LinkedIn**: [Praveen Kumar Akula](https://www.linkedin.com/in/praveen-kumar-akula-30a685255/)
-- **Phone**: +91 86393 22024
-
----
-
-## 📄 License
-
-This project is proprietary. All rights reserved by NexEraEco.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by NexEraEco Team | © 2026</sub>
-</div>
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
