@@ -1,26 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark Mode Defaults */
-  --bg-base: #020617;
-  --text-base: #cbd5e1;
-  --text-primary: #ffffff;
-  --text-muted: #64748b;
-  --card-bg: rgba(15, 23, 42, 0.4);
-  --card-border: rgba(255, 255, 255, 0.05);
-  --header-bg: rgba(2, 6, 23, 0.8);
-  --input-bg: #0f172a;
-  --emerald-accent: #10b981;
-  --teal-accent: #0f766e;
-  --gradient-emerald: rgba(16, 185, 129, 0.08);
-
-  /* Fonts */
-  --font-plus-jakarta: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
-  --font-outfit: "Outfit", system-ui, sans-serif;
-}
-
-.light {
-  /* Light Mode Overrides */
+  /* Light Mode Defaults */
   --bg-base: #fcfcfc;
   --text-base: #334155;
   --text-primary: #0f172a;
@@ -32,6 +13,25 @@
   --emerald-accent: #059669;
   --teal-accent: #0d9488;
   --gradient-emerald: rgba(5, 150, 105, 0.05);
+
+  /* Fonts */
+  --font-plus-jakarta: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-outfit: "Outfit", system-ui, sans-serif;
+}
+
+.dark {
+  /* Dark Mode Overrides */
+  --bg-base: #020617;
+  --text-base: #cbd5e1;
+  --text-primary: #ffffff;
+  --text-muted: #64748b;
+  --card-bg: rgba(15, 23, 42, 0.4);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --header-bg: rgba(2, 6, 23, 0.8);
+  --input-bg: #0f172a;
+  --emerald-accent: #10b981;
+  --teal-accent: #0f766e;
+  --gradient-emerald: rgba(16, 185, 129, 0.08);
 }
 
 @theme {

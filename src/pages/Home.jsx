@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { ArrowRight, Zap, ExternalLink, Mail, Phone, Linkedin, LucideExternalLink } from 'lucide-react';
-import { ExternalLink as LucideExternalLinkIcon } from 'lucide-react';
+import { ArrowRight, Zap, ExternalLink, Mail, Phone, Linkedin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
