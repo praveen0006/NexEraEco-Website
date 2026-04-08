@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
 import { FadeIn } from '../components/ui/Reveal';
 import { LayoutGrid, Binary, Zap, Cpu } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Prototype = () => {
+    usePageTitle('Prototyping Lab');
     return (
         <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-base)] transition-colors duration-500 font-sans overflow-x-hidden">
             {/* Hero Section */}
@@ -16,7 +17,7 @@ const Prototype = () => {
                         <h1 className="text-5xl md:text-7xl font-bold text-[var(--text-primary)] tracking-tight mb-6 leading-tight">
                             The <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Anatomy</span>
                         </h1>
-                        <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed font-light">
+                        <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed font-normal">
                             A closer look at the engineering behind SolarXite. High-performance hardware built for extreme rooftop conditions.
                         </p>
                     </FadeIn>
@@ -32,6 +33,7 @@ const Prototype = () => {
                             src="/assets/prototype.jpg"
                             alt="SolarXite Prototype"
                             className="w-full h-full object-cover grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000"
+                            loading="lazy"
                         />
 
                         <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent opacity-90 transition-colors duration-500"></div>
@@ -57,11 +59,11 @@ const Prototype = () => {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         {/* Large Main Item */}
                         <div className="md:col-span-2 md:row-span-2 min-h-[500px] relative group overflow-hidden rounded-3xl border border-[var(--card-border)] bg-[var(--card-bg)]">
-                            <img src="/assets/model.jpg" alt="Assembly" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+                            <img src="/assets/model.jpg" alt="Assembly" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" loading="lazy" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-10">
                                 <div>
                                     <h4 className="text-[var(--text-primary)] font-bold text-2xl">Main Assembly</h4>
-                                    <p className="text-[var(--text-base)] text-sm mt-2 font-light">Full system integration test with dual-axis movement capability.</p>
+                                    <p className="text-[var(--text-base)] text-sm mt-2 font-normal">Full system integration test with dual-axis movement capability.</p>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +74,7 @@ const Prototype = () => {
                                 <span className="text-[var(--emerald-accent)] font-mono text-xs uppercase tracking-[0.2em] font-bold">Build Detail 03</span>
                                 <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-3">Structural Frame</h3>
                             </div>
-                            <p className="text-[var(--text-muted)] leading-relaxed italic text-lg font-light">
+                            <p className="text-[var(--text-muted)] leading-relaxed italic text-lg font-normal">
                                 "Lightweight, corrosion-resistant aluminum alloy optimized for rooftop loads."
                             </p>
                             <div className="mt-8 flex gap-3">
@@ -92,6 +94,7 @@ const Prototype = () => {
                                     src={comp.img}
                                     alt={comp.label}
                                     className="w-full h-full object-contain p-10 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                    loading="lazy"
                                 />
                                 <div className="absolute bottom-4 left-4 right-4 bg-[var(--header-bg)] backdrop-blur-xl px-4 py-2 rounded-2xl border border-[var(--card-border)]">
                                     <div className="flex justify-between items-center">

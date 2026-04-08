@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Info, BarChart3, Target, ShieldCheck, Milestone, ArrowRight, Download, MessageSquare } from 'lucide-react';
+import { Info, BarChart3, Target, ShieldCheck, Milestone, ArrowRight, Download, MessageSquare, Globe2 } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Investors = () => {
+    usePageTitle('Investors');
     return (
         <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-base)] transition-colors duration-500 font-sans">
             {/* Hero Section */}
@@ -12,7 +14,7 @@ const Investors = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         Invest in the Future of Solar
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Join us in bringing smart solar tracking technology to millions of rooftops.
                     </p>
                 </div>
@@ -26,7 +28,7 @@ const Investors = () => {
                             <Info className="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" />
                             <div>
                                 <h4 className="text-amber-600 dark:text-amber-400 font-bold mb-3 uppercase tracking-wider text-xs">Stage Disclosure</h4>
-                                <p className="text-[var(--text-muted)] text-sm leading-relaxed font-light">
+                                <p className="text-[var(--text-muted)] text-sm leading-relaxed font-normal">
                                     NexEraEco is a <strong className="text-[var(--text-primary)]">pre-revenue startup</strong> at <strong className="text-[var(--text-primary)]">TRL-4</strong> (lab-validated prototype).
                                     We have not conducted any commercial pilots or generated revenue. Outdoor field validation is our next milestone.
                                     All investment discussions are speculative at this stage.
@@ -46,7 +48,7 @@ const Investors = () => {
                             <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4 mb-8">
                                 Why Rooftop Solar Tracking?
                             </h2>
-                            <div className="space-y-6 text-[var(--text-muted)] leading-relaxed font-light text-lg">
+                            <div className="space-y-6 text-[var(--text-muted)] leading-relaxed font-normal text-lg">
                                 <p>
                                     The global rooftop solar market is projected to reach $150+ billion by 2030, yet virtually
                                     all these installations use fixed-angle panels—leaving significant energy potential untapped.
@@ -81,7 +83,7 @@ const Investors = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4">
                             What We've Achieved
                         </h2>
-                        <p className="text-[var(--text-muted)] mt-6 font-light italic">Honest milestones without exaggeration</p>
+                        <p className="text-[var(--text-muted)] mt-6 font-normal italic">Honest milestones without exaggeration</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -116,7 +118,7 @@ const Investors = () => {
                                     {item.icon}
                                 </div>
                                 <h4 className="text-lg font-bold text-[var(--text-primary)] mb-3">{item.title}</h4>
-                                <p className="text-[var(--text-muted)] text-sm mb-6 leading-relaxed font-light">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm mb-6 leading-relaxed font-normal">{item.desc}</p>
                                 <span className={`inline-flex px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest ${item.status === 'complete'
                                     ? 'bg-emerald-500/10 text-[var(--emerald-accent)] border border-emerald-500/20'
                                     : 'bg-slate-500/10 text-[var(--text-muted)] border border-slate-500/20'
@@ -182,7 +184,7 @@ const Investors = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -224,7 +226,7 @@ const Investors = () => {
                                         style={{ width: `${item.percent}%` }}
                                     ></div>
                                 </div>
-                                <p className="text-[var(--text-muted)] text-xs font-light tracking-wide">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-xs font-normal tracking-wide">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -237,7 +239,7 @@ const Investors = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-8">
                         Interested in Learning More?
                     </h2>
-                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-normal leading-relaxed">
                         We're happy to discuss our technology, roadmap, and vision with potential investors.
                         Reach out for a conversation.
                     </p>
@@ -262,13 +264,5 @@ const Investors = () => {
         </div>
     );
 };
-
-// Assuming Globe2 is missing from imports
-const Globe2 = ({ className }) => (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" strokeWidth="2" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" strokeWidth="2" />
-    </svg>
-);
 
 export default Investors;

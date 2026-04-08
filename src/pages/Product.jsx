@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Cpu, ArrowRight, ChevronDown, CheckCircle2, Award, FileText, Download, Info } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Product = () => {
+    usePageTitle('SolarXite Details');
     const [openFaq, setOpenFaq] = useState(null);
 
     const faqs = [
@@ -59,7 +61,7 @@ const Product = () => {
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[var(--text-primary)] mt-4">
                         SolarXite
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Dual-axis solar tracking hardware designed specifically for rooftop installations.
                         Maximize your solar output without expanding your footprint.
                     </p>
@@ -73,7 +75,7 @@ const Product = () => {
                         {/* Problem */}
                         <div className="card bg-red-500/[0.02] border-red-500/10 !p-12">
                             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6">The Problem</h3>
-                            <p className="text-[var(--text-base)] font-light leading-relaxed">
+                            <p className="text-[var(--text-base)] font-normal leading-relaxed">
                                 Traditional fixed-angle rooftop solar panels capture only a fraction of available sunlight.
                                 As the sun moves across the sky, fixed panels lose efficiency—especially during morning and
                                 evening hours. This means you're leaving 25-40% of potential energy on the table.
@@ -82,7 +84,7 @@ const Product = () => {
                         {/* Solution */}
                         <div className="card bg-emerald-500/[0.02] border-emerald-500/10 !p-12">
                             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6">Our Solution</h3>
-                            <p className="text-[var(--text-base)] font-light leading-relaxed">
+                            <p className="text-[var(--text-base)] font-normal leading-relaxed">
                                 SolarXite brings smart, automated dual-axis tracking to rooftops. Our system continuously
                                 adjusts panel orientation to follow the sun's path, maximizing energy capture throughout
                                 the day. Designed for rooftop constraints: compact, lightweight, and easy to integrate.
@@ -113,7 +115,7 @@ const Product = () => {
                                     {item.step}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -142,7 +144,7 @@ const Product = () => {
                                 </div>
                                 <div className="p-6">
                                     <h4 className="text-lg font-bold text-[var(--text-primary)] mb-2">{item.title}</h4>
-                                    <p className="text-[var(--text-muted)] text-sm font-light">{item.desc}</p>
+                                    <p className="text-[var(--text-muted)] text-sm font-normal">{item.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -167,7 +169,7 @@ const Product = () => {
                                 <Shield className="w-8 h-8" />
                             </div>
                             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Design Patent</h3>
-                            <div className="space-y-2 text-[var(--text-muted)] text-sm font-light mb-8">
+                            <div className="space-y-2 text-[var(--text-muted)] text-sm font-normal mb-8">
                                 <p><strong className="text-[var(--text-primary)] not-italic">Patent No:</strong> 428970-001</p>
                                 <p><strong className="text-[var(--text-primary)] not-italic">Date:</strong> September 2024</p>
                                 <p><strong className="text-[var(--text-primary)] not-italic">Authority:</strong> Government of India</p>
@@ -188,7 +190,7 @@ const Product = () => {
                                 <Award className="w-8 h-8" />
                             </div>
                             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Recognition</h3>
-                            <div className="space-y-4 text-[var(--text-muted)] font-light">
+                            <div className="space-y-4 text-[var(--text-muted)] font-normal">
                                 <p className="leading-relaxed">
                                     Shortlisted for the <strong className="text-[var(--text-primary)]">MisFits Innovation Program</strong>,
                                     recognizing market-disruptive potential in clean energy hardware.
@@ -221,7 +223,7 @@ const Product = () => {
                                     }`}
                             >
                                 <div className="flex items-center justify-between mb-8">
-                                    <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest ${stage.status === 'completed'
+                                    <span className={`px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest ${stage.status === 'completed'
                                         ? 'bg-emerald-500/10 text-[var(--emerald-accent)]'
                                         : stage.status === 'current'
                                             ? 'bg-emerald-500/20 text-[var(--emerald-accent)]'
@@ -229,12 +231,12 @@ const Product = () => {
                                         }`}>
                                         {stage.status === 'completed' ? '✓ Complete' : stage.status === 'current' ? '→ Current' : '○ Future'}
                                     </span>
-                                    <span className="text-[var(--text-muted)] text-sm font-mono font-bold tracking-tighter">{stage.stage}</span>
+                                    <span className="text-[var(--text-muted)] text-xs font-mono font-bold tracking-tighter">{stage.stage}</span>
                                 </div>
                                 <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6">{stage.title}</h3>
                                 <ul className="space-y-4">
                                     {stage.items.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-[var(--text-muted)] text-sm font-light">
+                                        <li key={i} className="flex items-start gap-3 text-[var(--text-muted)] text-sm font-normal">
                                             <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${stage.status === 'completed' ? 'text-[var(--emerald-accent)]' : 'text-slate-600'
                                                 }`} />
                                             {item}
@@ -268,7 +270,7 @@ const Product = () => {
                                     <ChevronDown className={`w-5 h-5 text-[var(--text-muted)] transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                                 </button>
                                 <div className={`transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 border-t border-[var(--card-border)]' : 'max-h-0'}`}>
-                                    <div className="p-6 text-[var(--text-muted)] font-light leading-relaxed">
+                                    <div className="p-6 text-[var(--text-muted)] font-normal leading-relaxed">
                                         {faq.answer}
                                     </div>
                                 </div>
@@ -280,7 +282,7 @@ const Product = () => {
                     <div className="mt-16 bg-amber-500/5 border border-amber-500/10 rounded-2xl p-6 italic">
                         <div className="flex gap-4">
                             <Info className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
-                            <p className="text-[var(--text-muted)] text-sm leading-relaxed">
+                            <p className="text-[var(--text-muted)] text-base leading-relaxed">
                                 <strong className="not-italic text-amber-600 dark:text-amber-400">INDICATIVE DATA:</strong> Performance figures are based on lab testing and mathematical simulations.
                                 Field validation is ongoing. Results may vary by location and installation quality.
                             </p>
@@ -295,7 +297,7 @@ const Product = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8">
                         Interested in SolarXite?
                     </h2>
-                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-light leading-relaxed text-lg">
+                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto leading-relaxed text-lg">
                         Whether you're an EPC partner, investor, or potential customer, we'd love to hear from you.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">

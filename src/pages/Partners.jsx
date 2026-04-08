@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Cpu, ArrowRight, CheckCircle2, Building2, Globe2 } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Partners = () => {
+    usePageTitle('Our Partners');
     const [formData, setFormData] = useState({
         companyName: '',
         contactName: '',
@@ -29,14 +31,6 @@ const Partners = () => {
         window.location.href = `mailto:praveen19121@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
     };
 
-    const [newsletterEmail, setNewsletterEmail] = useState('');
-
-    const handleNewsletter = (e) => {
-        e.preventDefault();
-        alert(`Thank you for subscribing! We'll send updates to ${newsletterEmail}`);
-        setNewsletterEmail('');
-    };
-
     return (
         <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-base)] transition-colors duration-500 font-sans">
             {/* Hero Section */}
@@ -47,7 +41,7 @@ const Partners = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         Differentiate Your Solar Installations
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Add dual-axis tracking to your rooftop offerings. Stand out from competitors
                         with technology that delivers measurably more energy from the same roof space.
                     </p>
@@ -91,7 +85,7 @@ const Partners = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -106,7 +100,7 @@ const Partners = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4">
                             Installation Envelope
                         </h2>
-                        <p className="text-[var(--text-muted)] mt-4 font-light italic">Key specifications for planning your SolarXite installations</p>
+                        <p className="text-[var(--text-muted)] mt-4 font-normal italic">Key specifications for planning your SolarXite installations</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,7 +115,7 @@ const Partners = () => {
                             <div key={index} className="card text-center">
                                 <p className="text-[var(--emerald-accent)] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">{spec.label}</p>
                                 <p className="text-2xl font-bold text-[var(--text-primary)] mb-2">{spec.value}</p>
-                                <p className="text-[var(--text-muted)] text-sm font-light">{spec.note}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal">{spec.note}</p>
                             </div>
                         ))}
                     </div>
@@ -151,7 +145,7 @@ const Partners = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--emerald-accent)] transition-colors">{benefit.title}</h3>
-                                    <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{benefit.desc}</p>
+                                    <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{benefit.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -167,14 +161,14 @@ const Partners = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4">
                             Pilot Case Studies
                         </h2>
-                        <p className="text-[var(--text-muted)] mt-4 font-light italic">Performance data from pilot installations (coming after outdoor validation)</p>
+                        <p className="text-[var(--text-muted)] mt-4 font-normal italic">Performance data from pilot installations (coming after outdoor validation)</p>
                     </div>
 
                     <div className="max-w-2xl mx-auto">
                         <div className="card text-center !p-12">
                             <Zap className="w-12 h-12 text-[var(--emerald-accent)] mx-auto mb-6 animate-pulse" />
                             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Pilot Data Coming Soon</h3>
-                            <p className="text-[var(--text-muted)] mb-10 font-light leading-relaxed">
+                            <p className="text-[var(--text-muted)] mb-10 font-normal leading-relaxed">
                                 We're currently in lab validation (TRL-4) with outdoor testing planned next.
                                 Once we have real-world performance data, we'll publish detailed case studies.
                             </p>
@@ -200,7 +194,7 @@ const Partners = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4">
                             Request a Pilot Installation
                         </h2>
-                        <p className="text-[var(--text-muted)] mt-4 font-light">Interested in being an early adopter? Tell us about your installation capabilities.</p>
+                        <p className="text-[var(--text-muted)] mt-4 font-normal">Interested in being an early adopter? Tell us about your installation capabilities.</p>
                     </div>
 
                     <div className="max-w-3xl mx-auto">

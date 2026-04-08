@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Lightbulb, Shield, Zap, Cpu, ArrowRight, ExternalLink } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Products = () => {
+    usePageTitle('Our Products');
     const products = [
         {
             id: 'solarxite',
@@ -42,7 +44,7 @@ const Products = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         Products
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Innovative clean energy solutions designed to maximize efficiency and accessibility.
                     </p>
                 </div>
@@ -67,6 +69,7 @@ const Products = () => {
                                                     src={product.image}
                                                     alt={product.name}
                                                     className="rounded-[32px] shadow-2xl border border-[var(--card-border)] w-full grayscale hover:grayscale-0 transition-all duration-1000"
+                                                    loading="lazy"
                                                 />
                                             </div>
                                         ) : (
@@ -95,7 +98,7 @@ const Products = () => {
                                         </h2>
                                         <p className="text-[var(--emerald-accent)] text-lg mb-8 font-medium">{product.tagline}</p>
 
-                                        <p className="text-[var(--text-muted)] mb-8 leading-relaxed font-light text-lg">
+                                        <p className="text-[var(--text-muted)] mb-8 leading-relaxed font-normal text-lg">
                                             {product.description}
                                         </p>
 
@@ -172,7 +175,7 @@ const Products = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -185,7 +188,7 @@ const Products = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 leading-tight">
                         Interested in Our Products?
                     </h2>
-                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-normal leading-relaxed">
                         Whether you're an EPC partner, investor, or potential customer, we'd love to discuss how our technology can help you.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">

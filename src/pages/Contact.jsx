@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail, Phone, Shield, Zap, Cpu, Send, Download } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Contact = () => {
+    usePageTitle('Contact Us');
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -33,7 +35,7 @@ const Contact = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         Contact Us
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-2xl mx-auto font-normal leading-relaxed">
                         Interested in SolarXite? We'd love to hear from you.
                     </p>
                 </div>
@@ -97,7 +99,7 @@ const Contact = () => {
 
                             {/* Pitch Deck Download */}
                             <div className="pt-12 border-t border-[var(--card-border)]">
-                                <p className="text-[var(--text-muted)] text-sm mb-6 font-light">Interested in our full technical roadmap?</p>
+                                <p className="text-[var(--text-muted)] text-sm mb-6 font-normal">Interested in our full technical roadmap?</p>
                                 <a
                                     href="/assets/deck.pdf"
                                     target="_blank"
@@ -210,7 +212,7 @@ const Contact = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </Link>
                         ))}
                     </div>

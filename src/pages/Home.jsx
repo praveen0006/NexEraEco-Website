@@ -4,10 +4,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { ArrowRight, Zap, ExternalLink, Mail, Phone, Linkedin } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+    usePageTitle('Rooftop Solar Tracking');
     const containerRef = useRef(null);
     const sectionsRef = useRef([]);
 
@@ -66,7 +68,7 @@ const Home = () => {
             </div>
 
             {/* --- HERO SECTION: CLEAN SAAS --- */}
-            <section className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-4">
+            <section className="relative z-10 min-h-[90vh] flex flex-col items-center justify-center pt-32 pb-12 px-4">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="hero-reveal section-label">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--emerald-accent)] animate-pulse"></span>
@@ -78,7 +80,7 @@ const Home = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Through IoT.</span>
                     </h1>
 
-                    <p className="hero-reveal text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+                    <p className="hero-reveal text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto mb-12 leading-relaxed">
                         Building practical clean-tech innovations for a sustainable future.
                         Engineering the next generation of hardware for a healthier planet.
                     </p>
@@ -95,13 +97,13 @@ const Home = () => {
             </section>
 
             {/* --- FLAGSHIP: SOLARXITE FOCUS (80%) --- */}
-            <section ref={addToRefs} className="relative z-10 py-32 px-4 border-t border-[var(--card-border)] bg-gray-500/5">
+            <section ref={addToRefs} className="relative z-10 py-20 px-4 border-t border-[var(--card-border)] bg-gray-500/5">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className="scroll-reveal">
                             <span className="section-label">Flagship Innovation</span>
                             <h2 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)] mb-8 leading-tight">SolarXite — Rooftop Solar Hardware</h2>
-                            <p className="text-lg text-[var(--text-base)] leading-relaxed mb-10 font-light">
+                            <p className="text-lg text-[var(--text-base)] leading-relaxed mb-10 font-normal">
                                 SolarXite is a <span className="text-[var(--text-primary)] font-medium italic">TRL-4 dual-axis rooftop solar tracking system</span> designed to improve energy generation by dynamically optimizing orientation.
                             </p>
 
@@ -129,11 +131,11 @@ const Home = () => {
                         <div className="scroll-reveal relative">
                             <div className="aspect-[4/5] md:aspect-square bg-[var(--bg-base)] rounded-[48px] border border-[var(--card-border)] overflow-hidden shadow-2xl relative group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-50"></div>
-                                <img src="/assets/model.jpg" alt="SolarXite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" />
+                                <img src="/assets/model.jpg" alt="SolarXite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" loading="lazy" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
                                     <p className="text-[var(--text-primary)] text-2xl font-bold">SolarXite Build_01</p>
-                                    <p className="text-[var(--emerald-accent)] font-mono text-[10px] tracking-widest mt-1 font-bold">HARDWARE VALIDATION</p>
+                                    <p className="text-[var(--emerald-accent)] font-mono text-xs font-bold mt-1 font-bold">HARDWARE VALIDATION</p>
                                 </div>
                             </div>
                         </div>
@@ -142,17 +144,17 @@ const Home = () => {
             </section>
 
             {/* --- PROBLEM & SOLUTION: CLEAN GRID --- */}
-            <section ref={addToRefs} className="relative z-10 py-32 px-4">
+            <section ref={addToRefs} className="relative z-10 py-20 px-4">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
                     <div className="scroll-reveal card border-red-500/5 hover:border-red-500/20">
                         <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6">The Problem</h3>
-                        <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                        <p className="text-[var(--text-muted)] leading-relaxed">
                             Fixed rooftop panels lose significant potential output as the sun moves. Urban shading and space constraints further reduce efficiency, leading to lower generation and longer payback periods.
                         </p>
                     </div>
                     <div className="scroll-reveal card border-emerald-500/5 hover:border-emerald-500/20">
                         <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6">Our Solution</h3>
-                        <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                        <p className="text-[var(--text-muted)] leading-relaxed">
                             SolarXite improves energy capture by dynamically adjusting panel alignment.
                             Designed to increase output <span className="text-[var(--emerald-accent)] font-medium">per panel</span> without increasing rooftop area.
                         </p>
@@ -161,14 +163,14 @@ const Home = () => {
             </section>
 
             {/* --- ROADMAP & IMPACT: MINIMALIST --- */}
-            <section ref={addToRefs} className="relative z-10 py-32 px-4 bg-gray-500/5 border-y border-[var(--card-border)]">
+            <section ref={addToRefs} className="relative z-10 py-20 px-4 bg-gray-500/5 border-y border-[var(--card-border)]">
                 <div className="max-w-5xl mx-auto text-center">
                     <div className="scroll-reveal mb-24">
                         <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8">Current Stage & Roadmap</h2>
                         <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-[var(--emerald-accent)]/30 bg-emerald-500/5 text-[var(--emerald-accent)] font-mono text-xs font-bold uppercase tracking-widest">
                             Stage: TRL-4
                         </div>
-                        <p className="mt-8 text-xl text-[var(--text-muted)] font-light">
+                        <p className="mt-8 text-xl text-[var(--text-muted)] font-normal">
                             Functional prototype validated under controlled lab conditions.
                             Next: <span className="text-[var(--text-primary)] italic">Outdoor durability & performance validation.</span>
                         </p>
@@ -182,7 +184,7 @@ const Home = () => {
                         ].map((stat, i) => (
                             <div key={i} className="scroll-reveal group">
                                 <p className="text-4xl md:text-6xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--emerald-accent)] transition-colors">{stat.val}</p>
-                                <p className="text-[var(--text-muted)] font-mono text-[10px] uppercase tracking-[0.4em]">{stat.label}</p>
+                                <p className="text-[var(--text-muted)] font-mono text-sm font-mono font-bold">{stat.label}</p>
                             </div>
                         ))}
                     </div>
@@ -190,12 +192,12 @@ const Home = () => {
             </section>
 
             {/* --- R&D PIPELINE: CONCEPTUAL LABELS --- */}
-            <section ref={addToRefs} className="relative z-10 py-32 px-4">
+            <section ref={addToRefs} className="relative z-10 py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 scroll-reveal">
                         <div className="max-w-xl">
                             <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-6">R&D Pipeline</h2>
-                            <p className="text-[var(--text-muted)] font-light italic">"NexEraEco is also exploring other sustainability-focused innovations at the concept stage."</p>
+                            <p className="text-[var(--text-muted)] font-normal italic">"NexEraEco is also exploring other sustainability-focused innovations at the concept stage."</p>
                         </div>
                         <Link to="/products" className="group flex items-center gap-3 text-[var(--emerald-accent)] font-mono text-xs tracking-widest hover:text-[var(--text-primary)] transition-all">
                             EXPLORE R&D <ArrowRight className="w-4 h-4 group-hover:translate-x-1" />
@@ -210,7 +212,7 @@ const Home = () => {
                             <div key={i} className="scroll-reveal card group">
                                 <div className="flex justify-between items-start mb-4">
                                     <h4 className="text-xl font-bold text-[var(--text-primary)] group-hover:text-[var(--emerald-accent)] transition-colors">{item.title}</h4>
-                                    <span className="text-[9px] font-mono font-bold bg-[var(--card-bg)] border border-[var(--card-border)] px-2 py-0.5 rounded text-[var(--text-muted)]">{item.tag}</span>
+                                    <span className="text-xs font-bold bg-[var(--card-bg)] border border-[var(--card-border)] px-2 py-0.5 rounded text-[var(--text-muted)]">{item.tag}</span>
                                 </div>
                                 <p className="text-[var(--text-muted)] text-sm">{item.desc}</p>
                             </div>
@@ -220,10 +222,10 @@ const Home = () => {
             </section>
 
             {/* --- RESEARCH CREDIBILITY --- */}
-            <section className="relative z-10 py-24 border-t border-[var(--card-border)] bg-gray-500/5">
+            <section ref={addToRefs} className="relative z-10 py-20 border-t border-[var(--card-border)] bg-gray-500/5">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-6 scroll-reveal">Research Validation</h2>
-                    <p className="text-[var(--text-muted)] mb-8 font-light scroll-reveal">
+                    <p className="text-[var(--text-muted)] mb-8 font-normal scroll-reveal">
                         Our research work on <span className="text-[var(--text-primary)] font-medium">Smart Crop Guard</span> optimization logic has been published on <span className="text-[var(--text-primary)] font-medium">IEEE Xplore</span>,
                         validating our approach to precision agri-tech.
                     </p>
@@ -239,10 +241,10 @@ const Home = () => {
             </section>
 
             {/* --- CONTACT SECTION: CLEAN FOOTER --- */}
-            <section ref={addToRefs} className="relative z-10 py-44 px-4 text-center">
+            <section ref={addToRefs} className="relative z-10 py-32 px-4 text-center">
                 <div className="max-w-4xl mx-auto scroll-reveal">
                     <h2 className="text-5xl md:text-8xl font-bold text-[var(--text-primary)] mb-10 tracking-tighter">Contact</h2>
-                    <p className="text-lg md:text-xl text-[var(--text-muted)] mb-16 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-[var(--text-muted)] mb-16 font-normal leading-relaxed max-w-2xl mx-auto">
                         Connect with us to evaluate or support our validation mission.
                     </p>
 

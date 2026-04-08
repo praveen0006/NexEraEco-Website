@@ -9,10 +9,10 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/assets/logo.png" alt="NexEraEco" className="h-10 w-10 rounded-lg shadow-lg" />
+                            <img src="/assets/logo.png" alt="NexEraEco" className="h-10 w-10 rounded-lg shadow-lg" loading="lazy" />
                             <span className="text-xl font-bold text-[var(--text-primary)]">NexEraEco</span>
                         </div>
-                        <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-8 font-light">
+                        <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-8 font-normal">
                             Building the next generation of rooftop solar technology.
                             Empowering clean energy adoption through innovation.
                         </p>
@@ -82,7 +82,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="mt-20 pt-10 border-t border-[var(--card-border)] flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-[var(--text-muted)] text-xs font-light">
+                    <p className="text-[var(--text-muted)] text-xs font-normal">
                         © 2026 NexEraEco. All rights reserved. Registered Design Patent pending.
                     </p>
                     <div className="flex items-center gap-8">

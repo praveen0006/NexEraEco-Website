@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Shield, Zap, Cpu, CheckCircle, Eye } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const About = () => {
+    usePageTitle('About Us');
     return (
         <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-base)] transition-colors duration-500 font-sans">
             {/* Hero Section */}
@@ -12,7 +14,7 @@ const About = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         About NexEraEco
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Building the next generation of rooftop solar technology to accelerate clean energy adoption.
                     </p>
                 </div>
@@ -30,7 +32,7 @@ const About = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-[var(--text-primary)]">Our Mission</h3>
                             </div>
-                            <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                            <p className="text-[var(--text-muted)] leading-relaxed font-normal">
                                 To make rooftop solar more efficient and accessible for everyone. We believe that smarter
                                 solar technology can accelerate the transition to clean energy, one rooftop at a time.
                             </p>
@@ -44,7 +46,7 @@ const About = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-[var(--text-primary)]">Our Vision</h3>
                             </div>
-                            <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                            <p className="text-[var(--text-muted)] leading-relaxed font-normal">
                                 A world where every rooftop solar installation operates at peak efficiency. We envision
                                 SolarXite becoming the standard for intelligent solar tracking, maximizing clean energy
                                 generation across millions of homes and businesses.
@@ -64,17 +66,17 @@ const About = () => {
                                 Why We Started
                             </h3>
                             <div className="space-y-6">
-                                <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                                <p className="text-[var(--text-muted)] leading-relaxed font-normal">
                                     NexEraEco was born from a simple observation: while ground-mounted solar trackers
                                     have existed for years, rooftop installations—where most residential and commercial
                                     solar lives—were stuck with fixed panels.
                                 </p>
-                                <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                                <p className="text-[var(--text-muted)] leading-relaxed font-normal">
                                     We asked: why should rooftop solar owners miss out on the efficiency gains of tracking
                                     technology? That question led us to develop SolarXite—a compact, affordable dual-axis
                                     tracker designed from the ground up for rooftops.
                                 </p>
-                                <p className="text-[var(--text-muted)] leading-relaxed font-light">
+                                <p className="text-[var(--text-muted)] leading-relaxed font-normal">
                                     With a patented design and working prototype, we're now on a mission to bring this
                                     technology to market and help rooftop solar reach its full potential.
                                 </p>
@@ -86,6 +88,7 @@ const About = () => {
                                 src="/assets/prototype.jpg"
                                 alt="SolarXite Prototype"
                                 className="rounded-[40px] shadow-2xl border border-[var(--card-border)] grayscale hover:grayscale-0 transition-all duration-1000 relative z-10"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -110,7 +113,7 @@ const About = () => {
                             </div>
                             <h4 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Akula Praveen Kumar</h4>
                             <p className="text-[var(--emerald-accent)] text-sm mb-6 font-mono font-bold tracking-widest uppercase">Founder & Lead Engineer</p>
-                            <p className="text-[var(--text-muted)] text-sm mb-8 font-light leading-relaxed">
+                            <p className="text-[var(--text-muted)] text-sm mb-8 font-normal leading-relaxed">
                                 Driving the vision and technical development of SolarXite.
                                 Passionate about renewable energy and sustainable technology.
                             </p>
@@ -132,7 +135,7 @@ const About = () => {
                             </div>
                             <h4 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Core Team</h4>
                             <p className="text-[var(--emerald-accent)] text-sm mb-6 font-mono font-bold tracking-widest uppercase">Engineering & Operations</p>
-                            <p className="text-[var(--text-muted)] text-sm mb-8 font-light leading-relaxed">
+                            <p className="text-[var(--text-muted)] text-sm mb-8 font-normal leading-relaxed">
                                 A dedicated 3-member team working across hardware design, embedded systems,
                                 and product development.
                             </p>
@@ -174,7 +177,7 @@ const About = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -187,7 +190,7 @@ const About = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8">
                         Want to Work With Us?
                     </h2>
-                    <p className="text-[var(--text-muted)] mb-12 max-w-xl mx-auto font-light leading-relaxed">
+                    <p className="text-[var(--text-muted)] mb-12 max-w-xl mx-auto font-normal leading-relaxed">
                         We're open to partnerships, investments, and collaborations to heal nature through IoT.
                     </p>
                     <Link to="/contact" className="btn-primary">Get in Touch</Link>

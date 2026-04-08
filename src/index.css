@@ -3,11 +3,11 @@
 :root {
   /* Light Mode Defaults */
   --bg-base: #fcfcfc;
-  --text-base: #334155;
-  --text-primary: #0f172a;
-  --text-muted: #64748b;
-  --card-bg: rgba(255, 255, 255, 0.6);
-  --card-border: rgba(15, 23, 42, 0.08);
+  --text-base: #1e293b;
+  --text-primary: #020617;
+  --text-muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(15, 23, 42, 0.12);
   --header-bg: rgba(252, 252, 252, 0.8);
   --input-bg: #ffffff;
   --emerald-accent: #059669;
@@ -22,11 +22,11 @@
 .dark {
   /* Dark Mode Overrides */
   --bg-base: #020617;
-  --text-base: #cbd5e1;
+  --text-base: #e2e8f0;
   --text-primary: #ffffff;
-  --text-muted: #64748b;
-  --card-bg: rgba(15, 23, 42, 0.4);
-  --card-border: rgba(255, 255, 255, 0.05);
+  --text-muted: #94a3b8;
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --card-border: rgba(255, 255, 255, 0.1);
   --header-bg: rgba(2, 6, 23, 0.8);
   --input-bg: #0f172a;
   --emerald-accent: #10b981;
@@ -137,6 +137,7 @@
   /* Cards */
   .card {
     @apply bg-[var(--card-bg)] backdrop-blur-md border border-[var(--card-border)] rounded-[32px] p-8 transition-all duration-500 relative overflow-hidden;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.02), 0 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 
   .card-glow:hover {
@@ -146,7 +147,7 @@
 
   /* Section Labels */
   .section-label {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[var(--emerald-accent)] bg-emerald-500/5 border border-emerald-500/10 rounded-full;
+    @apply inline-flex items-center gap-2 px-5 py-2 mb-8 text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[var(--emerald-accent)] bg-emerald-500/10 border border-emerald-500/20 rounded-full shadow-sm shadow-emerald-500/5;
   }
 }
 

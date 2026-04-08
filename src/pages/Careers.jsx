@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Rocket, Leaf, Cpu, BookOpen, Users, Shield, Briefcase, Mail } from 'lucide-react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Careers = () => {
+    usePageTitle('Careers');
     return (
         <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-base)] transition-colors duration-500 font-sans">
             {/* Hero Section */}
@@ -12,7 +14,7 @@ const Careers = () => {
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mt-4">
                         Careers at NexEraEco
                     </h1>
-                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-xl text-[var(--text-muted)] mt-6 max-w-3xl mx-auto font-normal leading-relaxed">
                         Help us build the future of rooftop solar technology. We're looking for passionate
                         individuals who want to make a real impact in clean energy.
                     </p>
@@ -24,7 +26,7 @@ const Careers = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-[40px] p-10 text-center backdrop-blur-sm">
                         <h4 className="text-[var(--emerald-accent)] font-mono font-bold tracking-[0.2em] uppercase text-xs mb-4">Startup Stage</h4>
-                        <p className="text-[var(--text-muted)] font-light max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-[var(--text-muted)] font-normal max-w-2xl mx-auto leading-relaxed">
                             NexEraEco is currently a <strong className="text-[var(--text-primary)]">3-member startup</strong>.
                             We're at <strong className="text-[var(--text-primary)]">TRL-4</strong> with a validated working prototype and are actively preparing for outdoor field testing.
                         </p>
@@ -80,7 +82,7 @@ const Careers = () => {
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{item.title}</h3>
-                                <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{item.desc}</p>
+                                <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -95,7 +97,7 @@ const Careers = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-4">
                             Upcoming Talents
                         </h2>
-                        <p className="text-[var(--text-muted)] mt-6 max-w-2xl mx-auto font-light">
+                        <p className="text-[var(--text-muted)] mt-6 max-w-2xl mx-auto font-normal">
                             While we don't have formal openings today, we're building a network of talented individuals.
                         </p>
                     </div>
@@ -113,7 +115,7 @@ const Careers = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold text-[var(--text-primary)] mb-1">{role.title}</h4>
-                                    <p className="text-[var(--text-muted)] text-sm font-light leading-relaxed">{role.desc}</p>
+                                    <p className="text-[var(--text-muted)] text-sm font-normal leading-relaxed">{role.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -129,7 +131,7 @@ const Careers = () => {
                             <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8">
                                 Interested in Joining?
                             </h2>
-                            <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                            <p className="text-[var(--text-muted)] mb-12 max-w-2xl mx-auto font-normal leading-relaxed">
                                 Share your background and your vision for a greener future. We're always looking for the next spark of innovation.
                             </p>
                             <Link to="/contact" className="btn-primary">
