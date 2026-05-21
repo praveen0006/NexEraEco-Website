@@ -39,17 +39,17 @@ const Header = ({ isDarkMode, toggleTheme }) => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden nav:flex items-center gap-3 lg:gap-8">
                         {mainLinks.map((link, index) => (
                             link.dropdown ? (
                                 <div key={index} className="relative group">
                                     <button
-                                        className="text-sm font-semibold text-[var(--text-base)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1 py-2"
+                                        className="text-xs lg:text-sm font-semibold text-[var(--text-base)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1 py-2"
                                         onMouseEnter={() => setProductsOpen(true)}
                                         onMouseLeave={() => setProductsOpen(false)}
                                     >
                                         {link.label}
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${productsOpen ? 'rotate-180 text-neon-cyan' : ''}`} />
+                                        <ChevronDown className={`w-3.5 h-3.5 lg:w-4 lg:h-4 transition-transform duration-200 ${productsOpen ? 'rotate-180 text-neon-cyan' : ''}`} />
                                     </button>
                                     <div
                                         className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-[var(--bg-base)] border border-[var(--card-border)] rounded-2xl shadow-xl py-2 transition-all duration-200 overflow-hidden backdrop-blur-3xl ${productsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
@@ -75,7 +75,7 @@ const Header = ({ isDarkMode, toggleTheme }) => {
                                 <Link
                                     key={link.path}
                                     to={link.path}
-                                    className={`text-sm font-semibold transition-all duration-300 relative py-2 ${isActive(link.path)
+                                    className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative py-2 ${isActive(link.path)
                                         ? 'text-neon-cyan'
                                         : 'text-[var(--text-base)] hover:text-[var(--text-primary)]'
                                         }`}
@@ -87,24 +87,24 @@ const Header = ({ isDarkMode, toggleTheme }) => {
                             )
                         ))}
 
-                        <div className="flex items-center gap-4 pl-4 border-l border-[var(--card-border)]">
+                        <div className="flex items-center gap-2.5 lg:gap-4 pl-2 lg:pl-4 border-l border-[var(--card-border)]">
                             {/* Theme Toggle */}
                             <button
                                 onClick={toggleTheme}
-                                className="p-2 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--text-primary)] hover:text-neon-cyan transition-all active:scale-90"
+                                className="p-1.5 lg:p-2 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--text-primary)] hover:text-neon-cyan transition-all active:scale-90"
                                 aria-label="Toggle Theme"
                             >
-                                {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                                {isDarkMode ? <Sun className="w-4 h-4 lg:w-5 lg:h-5" /> : <Moon className="w-4 h-4 lg:w-5 lg:h-5" />}
                             </button>
 
-                            <Link to="/investors" className="btn-primary text-xs py-2 px-6 !shadow-none hover:bg-neon-blue">
+                            <Link to="/investors" className="btn-primary text-[10px] lg:text-xs py-1.5 lg:py-2 px-3 lg:px-6 !shadow-none hover:bg-neon-blue">
                                 Investors
                             </Link>
                         </div>
                     </nav>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-3">
+                    <div className="nav:hidden flex items-center gap-3">
                         <button
                             onClick={toggleTheme}
                             className="p-2 rounded-lg bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--text-primary)]"
@@ -123,7 +123,7 @@ const Header = ({ isDarkMode, toggleTheme }) => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden absolute top-full left-0 w-full bg-[var(--bg-base)] border-b border-[var(--card-border)] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
+            <div className={`nav:hidden absolute top-full left-0 w-full bg-[var(--bg-base)] border-b border-[var(--card-border)] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                 <nav className="px-4 py-6 space-y-1">
                     {mainLinks.map((link) => (

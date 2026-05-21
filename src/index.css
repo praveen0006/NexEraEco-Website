@@ -50,6 +50,14 @@
   /* Unified for now as requested 'another decent font' */
   --font-mono: "Space Mono", monospace;
 
+  /* Breakpoints in px units for responsiveness stability */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-nav: 680px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
   /* Spacing */
   --spacing-18: 4.5rem;
   --spacing-112: 28rem;
